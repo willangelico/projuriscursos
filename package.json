@@ -1,0 +1,24 @@
+{
+  "name": "projuriscursos",
+  "version": "2.0.0",
+  "description": "Site Institucional com CMS",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willangelico/projuriscursos.git"
+  },
+  "keywords": [
+    "php",
+    "html",
+    "css"
+  ],
+  "author": "Will Angélico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willangelico/projuriscursos/issues"
+  },
+  "homepage": "https://github.com/willangelico/projuriscursos#readme"
+}
