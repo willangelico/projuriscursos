@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<h1>Monografias <small>Nova monografia</small></h1>
+	<ol class="breadcrumb">		
+		<li><a href="/admin"><i class="fa fa-tachometer"></i>Home</a></li>
+		<li><a href="/admin/monographs/"><i class="fa fa-file-text"></i>Monografias</a></li>
+		<li class="active">Nova monografia</li></ol>
+	</ol>
+	<div class="content-box">
+		<h2>Cadastro de nova monografia</h2>
+		<div class="group-actions">
+			<a class="btn btn-primary" href="#">Lista de monografias</a>
+		  	<a class="btn btn-primary" href="#">Nova monografia</a>
+		</div>
+		<div class="content-form">			
+			<form action="" method="POST" role="form">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>	
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+					</div>
+				</div>
+				<footer>
+					<button class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
+				</footer>
+			</form>
+		</div>
+	</div>
+	
+{% endblock %}

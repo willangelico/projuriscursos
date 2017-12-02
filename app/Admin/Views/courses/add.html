@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<h1>Cursos <small>Novo curso</small></h1>
+	<ol class="breadcrumb">		
+		<li><a href="/admin"><i class="fa fa-tachometer"></i>Home</a></li>
+		<li><a href="/admin/course/"><i class="fa fa-graduation-cap"></i>Cursos</a></li>
+		<li class="active">Novo Curso</li></ol>
+	</ol>
+	<div class="content-box">
+		<h2>Cadastro de novo curso</h2>
+		<div class="group-actions">
+			<a class="btn btn-primary" href="#">Lista de cursos</a>
+		  	<a class="btn btn-primary" href="#">Novo curso</a>
+		</div>
+		<div class="content-form">			
+			<form action="" method="POST" role="form">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>	
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+						<div class="form-group">
+							<label for="">label</label>
+							<input type="text" class="form-control" id="" placeholder="Input field">
+						</div>
+					</div>
+				</div>
+				<footer>
+					<button class="btn btn-primary"><i class="fa fa-floppy-o" aria-hidden="true"></i> Salvar</button>
+				</footer>
+			</form>
+		</div>
+	</div>
+	
+{% endblock %}

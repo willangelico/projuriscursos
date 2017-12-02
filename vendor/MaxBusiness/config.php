@@ -8,6 +8,7 @@ class Config
 	{
 		$this->defaults();
 		$this->globalVars();
+		$this->defaultMessages();
 		$this->security();
 		$this->debug();
 	}
@@ -34,6 +35,8 @@ class Config
 		define( 'URL', 'http://www.projuriscursos.com.br' );
 		// System Folders
 		define( 'FOLDERS', "admin|acesso");
+		// URL de Login admin
+        define( 'LOGIN_URI', '/login' );        
 		// App Namespace
 		define( 'APP_NAMESPACE', "App\\");
 
@@ -68,6 +71,15 @@ class Config
 
 	}
 
+	private function defaultMessages(){
+		// Erro Interno
+        define( 'INTERNAL_ERROR', 'Erro interno. Tente novamente ou contacte o administrador do sistema.');
+        // Sessão Expirada
+        define( 'INTERNAL_ERROR_SESSION_EXPIRED', 'Sessão expirada!');
+        // Usuário ou senha inválida
+        define( 'INTERNAL_ERROR_NOT_SET_USER_AND_PASS', 'Usuário e/ou senha errado. Tente novamente.');
+	}
+
 	private function security()
 	{
 		// Evita que usuários acesse este arquivo diretamente
@@ -88,5 +100,5 @@ class Config
         // Mostra todos os erros
         error_reporting(E_ALL);
         ini_set("display_errors", 1); 
-	}
+	}	
 }

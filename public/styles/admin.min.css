@@ -1,0 +1,133 @@
+.login-form {
+    max-width: 350px;
+    padding: 10px;
+    margin: 50px auto;
+}
+.login-form input[type="password"]{
+	margin-top: 10px;
+}
+.menu{
+    padding-top: 10px;
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+.menu ul li a {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: initial;
+    color: #b8c7ce;
+}
+
+.menu ul li a i{
+    font-size: 16px;
+    margin-right: 5px;
+    width: 20px;
+    text-align: center;
+}
+
+
+
+.left-bar {	
+    background: #222d32 none repeat scroll 0 0;
+    z-index: 20;
+    height: 100vh;
+}
+
+
+
+.btn{
+    background: #222d32 none repeat scroll 0 0;
+}
+.btn:hover {
+    background: #1E282C;
+}
+
+.btn i{
+    font-size: 16px;
+    margin-right: 5px;
+    width: 20px;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #169F85;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: #0d6352;
+    border: none;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited{
+    background-color: #033e32 !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.admin-content{
+    margin-top: 63px;
+    background-color: #f5f5f5;
+}
+
+.admin-content h1, 
+.admin-content h2{
+    float: left;
+}
+
+.breadcrumb {
+    float: right;
+    margin: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+.breadcrumb li i {
+    margin-right: 5px;
+}
+
+.breadcrumb li a:hover {
+    text-decoration: none;
+    color: #169F85;
+}
+
+.breadcrumb>.active {
+    color: #169F85;
+
+}
+.content-box {
+    clear: both;
+    background: #FFFFFF;
+    padding: 10px;
+    border-top: 2px solid #169F85;
+}
+
+.group-actions{
+  float: right;
+    margin: 20px;  
+}
+
+.content-form{
+    clear: both;
+    padding-bottom: 50px;
+}
+
+footer {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-top: 1px solid #e5e5e5;
+    bottom: 0;
+    padding: 10px 30px;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: right;
+}
