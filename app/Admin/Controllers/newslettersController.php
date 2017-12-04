@@ -8,15 +8,19 @@ class NewslettersController extends loginController
 {
  		
  	private $main;
+ 	private $model;
+ 	public $content;
 
 	public function __construct($main)
 	{
 		parent::auth(TRUE);
 		$this->main = $main;
+		$this->model = $this->main->loadModel('Newsletter');
 	}
 
 	public function index()
 	{
+		$this->content['list'] = $this->model->getAll();
 		echo $this->main->twig->render('\\newsletters\\index.html', $this->content);
 	}
 

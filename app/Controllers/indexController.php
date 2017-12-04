@@ -5,14 +5,18 @@ namespace App\Controllers;
 class IndexController
 {
 
-	public function __construct()
+	private $main;
+	public $content;
+
+	public function __construct($main)
 	{
-		echo "Mostra em todas";
+		$this->main = $main;
 
 	}
 
 	public function index()
 	{
-		echo "Página Inicial";
+		$this->content['title'] = "Projuris Cursos - Estudos Jurídicos";
+		echo $this->main->twig->render('\\index\\index.html', $this->content);
 	}
 }

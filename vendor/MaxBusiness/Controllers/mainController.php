@@ -38,4 +38,13 @@ class MainController
 		$this->twig = new \Twig_Environment($loader);
 		return;
 	}
+
+	public function loadModel($model)
+	{
+		if ( !$model ) 	return;
+
+		$nsModel = APP_NAMESPACE . "Models\\{$model}Model";
+
+        return new $nsModel($this->db,$this);
+	}
 }

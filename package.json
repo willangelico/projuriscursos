@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/willangelico/projuriscursos/issues"
   },
-  "homepage": "https://github.com/willangelico/projuriscursos#readme"
+  "homepage": "https://github.com/willangelico/projuriscursos#readme",
+  "dependencies": {
+    "jquery-mask-plugin": "^1.14.12"
+  }
 }

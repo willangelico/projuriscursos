@@ -1,0 +1,79 @@
+<!-- Modal Contato -->
+<div class="modal fade" id="contatoModal" tabindex="-1" role="dialog" aria-labelledby="contatoModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="contatoModal">Contato</h4>
+      </div>
+      <form action="" method="POST" role="form">
+        <div class="modal-body">        
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome" id="nome" required="required" placeholder="Insira seu nome">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" name="email" id="email" required="required" placeholder="Insira seu e-mail">
+              </div>
+              </div>
+                 <div class="col-md-6">
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="form-control phone" name="telefone" id="telefone" required="required" placeholder="Insira seu telefone">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" class="form-control" rows="3" required="required" placeholder="Insira aqui sua mensagem...."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal Esqueci minha senha -->
+<div class="modal fade" id="forgetModal" tabindex="-1" role="dialog" aria-labelledby="forgetModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="forgetModal">Esqueci minha senha</h4>
+      </div>
+      <form action="" method="POST" role="form">
+        <div class="modal-body">                 
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" name="email" id="email" required="required" placeholder="Insira seu e-mail">
+              </div>
+            </div>              
+          </div>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="submit" class="btn btn-primary">Reenviar minha senha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

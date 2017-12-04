@@ -8,15 +8,19 @@ class CoursesController extends loginController
 {
  		
  	private $main;
+ 	private $model;
+ 	public $content;
 
 	public function __construct($main)
 	{
 		parent::auth(TRUE);
 		$this->main = $main;
+		$this->model = $this->main->loadModel('Courses');
 	}
 
 	public function index()
 	{
+		$this->content['list'] = $this->model->getAll();
 		echo $this->main->twig->render('\\courses\\index.html', $this->content);
 	}
 
