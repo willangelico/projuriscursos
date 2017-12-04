@@ -4,7 +4,7 @@
 
 $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
-
+echo $baseDir;
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
