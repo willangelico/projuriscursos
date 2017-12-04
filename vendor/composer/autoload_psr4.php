@@ -8,6 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
-    'MaxBusiness\\' => array('/vendor/MaxBusiness'),
-    'App\\' => array('/app'),
+    'MaxBusiness\\' => array($vendorDir . '/MaxBusiness'),
+    'App\\' => array($baseDir . '/app'),
 );
