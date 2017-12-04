@@ -36,7 +36,7 @@ class ComposerStaticInitf5090222c2f3a1062ac57167a2d663a2
         ),
         'MaxBusiness\\' => 
         array (
-            0 => __DIR__ . '/..' . '/MaxBusiness',
+            0 => __DIR__ . '/../..' . '/public/vendor/MaxBusiness',
         ),
         'App\\' => 
         array (
