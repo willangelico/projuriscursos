@@ -36,11 +36,11 @@ class ComposerStaticInitf5090222c2f3a1062ac57167a2d663a2
         ),
         'MaxBusiness\\' => 
         array (
-            0 => '/home/teste.maxwill.com.br/public/vendor/MaxBusiness',
+            0 => '/vendor/MaxBusiness',
         ),
         'App\\' => 
         array (
-            0 => '/home/teste.maxwill.com.br/public/app',
+            0 => '/app',
         ),
     );
 

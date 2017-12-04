@@ -16,8 +16,8 @@
     },  
     "autoload": {
         "psr-4": {
-            "App\\": "/home/teste.maxwill.com.br/public/app/",
-            "MaxBusiness\\": "/home/teste.maxwill.com.br/public/vendor/MaxBusiness"
+            "App\\": "/app/",
+            "MaxBusiness\\": "/vendor/MaxBusiness"
         }
     }
 }
