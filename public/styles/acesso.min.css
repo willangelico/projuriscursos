@@ -1,0 +1,51 @@
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar-brand>img {
+    max-height: 50px;
+}
+
+nav.navbar {
+    background: #2b3e50 !important;
+}
+
+.nav.navbar-nav li{
+	border-bottom: 3px solid transparent;
+}
+.nav.navbar-nav li a{
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.nav.navbar-nav li a:hover,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover{
+	color: #ffffff;	
+	background-color: #2b3e50;
+}
+
+.nav.navbar-nav li:hover,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover{
+	background-color: #2b3e50;
+	border-bottom: 3px solid #ffffff;
+}
+
+.dropdown .fa-angle-down{
+	visibility: hidden;
+}
+.dropdown:hover .fa-angle-down{
+	visibility: visible;
+}
+
+.navbar-nav>li>.dropdown-menu{
+	background: #2b3e50;
+}
+
+.content{
+	margin-top: 100px;
+}

@@ -4,7 +4,7 @@ namespace App\Acesso\Controllers;
 
 use App\Acesso\Controllers\LoginController;
 
-class IndexController extends LoginController
+class MonografiasController extends LoginController
 {
 	
 
@@ -16,7 +16,8 @@ class IndexController extends LoginController
 
 	public function index()
 	{
-		echo $this->main->twig->render('\\index\\index.html', $this->content);
+		// busca materiais do aluno
+		echo $this->main->twig->render('\\monografias\\index.html', $this->content);
 	}
 
 }

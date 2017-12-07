@@ -48,10 +48,8 @@
 						scrolltop = $target.offset().top;
 					}
                     $('html, body').stop().animate ({
-                        'scrollTop': scrolltop - 70
-                    }, 1500, 'swing', function () {
-                        window.location.hash = target;                      
-                    });					
+                        'scrollTop': scrolltop - 100
+                    }, 1500, 'swing');					
                 });
 
                 var maskBehavior = function (val) {
@@ -78,8 +76,7 @@
                         var offset = $obj.offset();
                         var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');           
                         var bgpos = '70% ' + yPos + 'px';
-                        $obj.css('background-position', bgpos);
-                        $obj.css('background-size', 'cover');
+                        $obj.css('background-position', bgpos);                       
                     });
                 });
             });
