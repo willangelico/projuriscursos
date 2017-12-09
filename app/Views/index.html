@@ -39,8 +39,11 @@
 					$('body').addClass('scroll');
 				}
 				$('.scroll').on('click',function (e) {					
-                    e.preventDefault ();
-	                var target = this.hash;	         
+                    
+	                var target = this.hash;	    
+	                if( target ){
+	                	e.preventDefault ();	
+	                }
 					if(target=='#top'){					
 						scrolltop = 0;				
 					}else{

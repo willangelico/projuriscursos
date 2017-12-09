@@ -1,0 +1,16 @@
+<?php return array (
+  'plugins.generic.openads.description' => 'Esta ferramenta permite incluir anúncios do servidor de publicidade OpenAds no sistema.',
+  'plugins.generic.openads.descriptionUnconfigured' => 'A ferramenta permite incluir publicidade dinâmica do servidor OpenAds dentro do sistema. <strong>Leia o README disponível em plugins/generic/openAds para informações sobre como habilitar o plugin.</strong>',
+  'plugins.generic.openads' => 'Publicidade OpenAds',
+  'plugins.generic.openads.settings.description' => 'Use o formulário para escolher as regiões de publicidade OpenAds onde serão exibidos os conteúdos em potencial no sistema.',
+  'plugins.generic.openads.manager.settings' => 'Configurações',
+  'plugins.generic.openads.error.configFileNotFound' => 'Impossível acessar o arquivo de configuração {$filename}.',
+  'plugins.generic.openads.error.missingParameter' => 'Não foi possível ler pelo menos uma das configurações obrigatórias do arquivo de configuração do OpenAds. Os parâmetros obrigatórios são dbhost, dbuser, dbpassword, dbname, url_prefix, e table_prefix.',
+  'plugins.generic.openads.error.dbConnectionError' => 'Impossível conectar à base de dados OpenAds.',
+  'plugins.generic.openads.headerAd' => 'Anúncio no cabeçalho',
+  'plugins.generic.openads.contentAd' => 'Anúncio no conteúdo',
+  'plugins.generic.openads.sidebarAd' => 'Anúncio na barra lateral',
+  'plugins.generic.openads.orientation.left' => 'Esquerda',
+  'plugins.generic.openads.orientation.centre' => 'Centro',
+  'plugins.generic.openads.orientation.right' => 'Direita',
+); ?>

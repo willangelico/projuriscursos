@@ -1,0 +1,17 @@
+<?php return array (
+  'plugins.importexport.erudit.displayName' => 'Exportação para formato Erudit',
+  'plugins.importexport.erudit.description' => 'Exporta artigos utilizando a DTD inglesa Erudit',
+  'plugins.importexport.erudit.cliUsage' => 'Uso: {$scriptName} {$pluginName} [documentoXML] [caminhoRevista] [articleId] [galleyLabel]',
+  'plugins.importexport.erudit.export' => 'Exportar dados',
+  'plugins.importexport.erudit.export.issues' => 'Exportar edições',
+  'plugins.importexport.erudit.export.sections' => 'Exportar seções',
+  'plugins.importexport.erudit.export.articles' => 'Exportar artigos',
+  'plugins.importexport.erudit.selectIssue' => 'Escolha a edição',
+  'plugins.importexport.erudit.selectArticle' => 'Escolha o artigo',
+  'plugins.importexport.erudit.cliError' => 'ERRO:',
+  'plugins.importexport.erudit.error.unknownJournal' => 'Caminho da revista "{$journalPath}" inexistente.',
+  'plugins.importexport.erudit.export.error.couldNotWrite' => 'Não foi possível escrever no documento "{$fileName}".',
+  'plugins.importexport.erudit.export.error.articleNotFound' => 'Não há artigo compatível com o ID "{$articleId}" especificado.',
+  'plugins.importexport.erudit.export.error.galleyNotFound' => 'Não há composição compatível com o rótulo "{$galleyLabel}" especificado.',
+  'plugins.importexport.erudit.unavailable' => 'Indisponível',
+); ?>

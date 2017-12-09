@@ -1,0 +1,18 @@
+<?php return array (
+  'plugins.paymethod.paypal.displayName' => 'Pagamento via Paypal',
+  'plugins.paymethod.paypal.settings.paypalenable' => 'Habilitar PayPal',
+  'plugins.paymethod.paypal.settings.paypalurl' => 'URL da IPN',
+  'plugins.paymethod.paypal.settings.paypalurl.description' => 'Esta é a URL para o serviço de notificação instantânea do PayPal (Instant Payment Notification - IPN). Para testar, use <u>https://www.sandbox.paypal.com/cgi-bin/webscr</u>; para sistemas em produção, use <u>https://www.paypal.com/cgi-bin/webscr</u>.',
+  'plugins.paymethod.paypal.settings.selleraccount' => 'Conta do vendedor',
+  'plugins.paymethod.paypal.settings.selleraccount.description' => 'O login da conta do vendedor PayPal a ser utilizado, geralmente um e-mail.',
+  'plugins.paymethod.paypal.settings.curlNotInstalled' => 'Aviso: suporte a CURL no PHP não está instalado. Pagamentos via PayPal exigem a biblioteca CURL e não funcionará enquanto a biblioteca não for instalada.',
+  'plugins.paymethod.paypal.settings' => 'Configurações do PayPal',
+  'plugins.paymethod.paypal' => 'Pagamento via PayPal',
+  'plugins.paymethod.paypal.description' => 'O plugin de pagamentos via PayPal permite a usuários, sendo ou não membros do PayPal, utilizar a maioria dos cartões de crédito, bem como Cheques Eletrônicos (eChecks). O responsável deve criar uma <a href="http://www.paypal.com" target="_new">conta de negócios PayPal</a>.',
+  'plugins.paymethod.paypal.warning' => 'Clique em "Continuar" para acessar o portal do PayPal. Após realizar o pagamento por meio do PayPal, clique em "Retornar ao vendedor" ("Return to Merchant") para retornar ao site de onde iniciou a compra.',
+  'plugins.paymethod.paypal.purchase.description' => 'Descrição',
+  'plugins.paymethod.paypal.purchase.cancelled' => 'Sua compra foi cancelada.',
+  'plugins.paymethod.paypal.purchase.cancelled.title' => 'Compra cancelada.',
+  'plugins.paymethod.paypal.purchase.title' => 'Título',
+  'plugins.paymethod.paypal.purchase.fee' => 'Taxa',
+); ?>

@@ -1,0 +1,17 @@
+<?php return array (
+  'plugins.reports.counter.description' => 'Esta ferramenta permite armazenar e produzir relatórios compatíveis com a iniciativa <a href="http://www.projectcounter.org/about.html" target="_new">COUNTER</a>, sobre a atividade no portal.',
+  'plugins.reports.counter' => 'Estatísticas COUNTER',
+  'plugins.reports.counter.1a.title' => 'Relatório 1 (R2): Solicitações de texto completo de artigos por mês e revista',
+  'plugins.reports.counter.1a.title1' => 'Relatório 1 (R2)',
+  'plugins.reports.counter.1a.title2' => 'Número de solicitações bem-sucedidas de texto completo de artigos por mês e revista (Ano {$year})',
+  'plugins.reports.counter.1a.dateRun' => 'Data da execução:',
+  'plugins.reports.counter.1a.publisher' => 'Editora',
+  'plugins.reports.counter.1a.platform' => 'Plataforma',
+  'plugins.reports.counter.1a.printIssn' => 'ISSN impresso',
+  'plugins.reports.counter.1a.onlineIssn' => 'ISSN eletrônico',
+  'plugins.reports.counter.1a.ytdTotal' => 'Total YTD',
+  'plugins.reports.counter.1a.ytdHtml' => 'HTML YTD',
+  'plugins.reports.counter.1a.ytdPdf' => 'PDF YTD',
+  'plugins.reports.counter.1a.totalForAllJournals' => 'Total para todas as revistas',
+  'plugins.reports.counter.legacyStats' => 'Os links a seguir geram relatórios usando dados antigos do plugin COUNTER. Caso deseje relatórios COUNTER com a nova métrica COUNTER do OJS, use os links anteriores.',
+); ?>

@@ -40,20 +40,34 @@ class MaterialsModel
         if($status){
             $sttsDB = " and {$this->table}.status = {$status}";
         }
-        foreach($materials as $k => $m){
+        foreach ($materials as $k => $m) {
             $query = $this->db->query(
-                "SELECT materials.label as material_name, materials.file as material_file
+                "SELECT DISTINCT materials.dt_material as material_data
                 FROM {$this->table}, class, students_class
                 WHERE {$this->table}.id_class = class.id_class 
                 and class.id_class = students_class.id_class
                 and students_class.id_student = {$idStudent}
                 {$sttsDB}
-                ORDER BY class.id_class, {$this->table}.ordenation"
-            );    
-            $materials[$k]['materials'] = $query->fetchAll();
+                ORDER BY materials.dt_material DESC, {$this->table}.ordenation"
+            );       
+            $datam = $query->fetchAll();
+            foreach($datam as $key => $mat){                  
+                $query = $this->db->query(
+                    "SELECT materials.label as material_name, materials.file as material_file
+                    FROM {$this->table} 
+                    WHERE {$this->table}.id_class = {$materials[$k]['id_class']}
+                    and dt_material = '{$mat['material_data']}'
+                    {$sttsDB}
+                    ORDER BY materials.dt_material DESC, {$this->table}.ordenation"
+                );    
+                $matsByDate = $query->fetchAll();      
+                if( $matsByDate){
+                    $materials[$k]['data'][$key] = $mat;
+                    
+                    $materials[$k]['data'][$key]['material'] = $matsByDate;
+                }
+            }
         }
-
-        return $materials;
-        
+        return $materials;        
     }
 }

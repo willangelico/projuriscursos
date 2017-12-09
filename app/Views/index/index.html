@@ -16,27 +16,19 @@
 	<div class="row cursos" id="cursos">
 		<div class="cursos-box col-md-10 col-md-offset-1">
 			<div class="row">
+				{% for course in courses %}
 				<div class="col-md-4">
-					<a href="">
-						<h2><img src="/public/files/images/banners/curso-de-pos-graduacao-lato-senso-em-direito-do-estado575509.jpg" alt="Pós-graduação lato sensu em Direito do Estado" style="max-width: 100%"></h2>
-						<p>A presença do Estado no cotidiano das pessoas é facilmente perceptível, sejam quais forem o papel que cada indivíduo exerce na sociedade em que está inserido e o perfil que a ordem jurídica lhe confere. Assim, não se pode deixar de estudar, cada vez mais, sua disciplina jurídica, suas áreas de atuação e as condições de validade de toda a prática estatal. Na medida em que o Estado vem sendo repensado, e novos instrumentos de atuação vêm sendo instituídos, mais aumenta a demanda por profissionais especializados em Direito do Estado, tanto pelo setor público como pelo privado.</p>
-						<span class="btn-primary">Saiba Mais</a>
-					</a>
+					<div>
+						<h2>
+							<a href="{{ course.url_external ? course.url_external : course.url }}" target="{{ course.url_external ? '_blank' : '_self' }}">
+								<img src="/public/files/images/banners/{{course.banners}}" alt="{{ course.name }}" style="max-width: 100%">
+							</a>
+						</h2>
+						<p>{{ course.label }}</p>
+						<a href="/{{ course.url }}" class="btn-primary">Saiba Mais</a>
+					</div>
 				</div>
-				<div class="col-md-4">
-					<a href="">
-						<h2><img src="/public/files/images/banners/direito-civil166420.jpg" alt="Pós-graduação lato sensu em Direito do Estado" style="max-width: 100%"></h2>
-						<p>A presença do Estado no cotidiano das pessoas é facilmente perceptível, sejam quais forem o papel que cada indivíduo exerce na sociedade em que está inserido e o perfil que a ordem jurídica lhe confere. Assim, não se pode deixar de estudar, cada vez mais, sua disciplina jurídica, suas áreas de atuação e as condições de validade de toda a prática estatal. Na medida em que o Estado vem sendo repensado, e novos instrumentos de atuação vêm sendo instituídos, mais aumenta a demanda por profissionais especializados em Direito do Estado, tanto pelo setor público como pelo privado.</p>
-						<span class="btn-primary">Saiba Mais</a>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="">
-						<h2><img src="/public/files/images/banners/posgraduacao-lato-sensu-em-direito-do-trabalho---previdenciario808696.jpg" alt="Pós-graduação lato sensu em Direito do Estado" style="max-width: 100%"></h2>
-						<p>A presença do Estado no cotidiano das pessoas é facilmente perceptível, sejam quais forem o papel que cada indivíduo exerce na sociedade em que está inserido e o perfil que a ordem jurídica lhe confere. Assim, não se pode deixar de estudar, cada vez mais, sua disciplina jurídica, suas áreas de atuação e as condições de validade de toda a prática estatal. Na medida em que o Estado vem sendo repensado, e novos instrumentos de atuação vêm sendo instituídos, mais aumenta a demanda por profissionais especializados em Direito do Estado, tanto pelo setor público como pelo privado.</p>
-						<span class="btn-primary">Saiba Mais</a>
-					</a>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -51,69 +43,53 @@
 	</div>
 	<div class="row video parallax" data-speed="10" >
 		<div class="video-content col-md-10 col-md-offset-1">
-			<div class="video-embed col-md-6">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/d57EH3ptBhQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+			<div class="row">
+				<div class="video-embed col-md-6">
+					<iframe width="440" height="315" src="https://www.youtube.com/embed/d57EH3ptBhQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+				</div>
+				<ul class="video-list col-md-6">
+					<li><i class="fa fa-star" aria-hidden="true"></i> Professores capacitados</li>
+					<li><i class="fa fa-star" aria-hidden="true"></i> Materiais atualizados</li>
+					<li><i class="fa fa-star" aria-hidden="true"></i> 8 anos em atividade</li>
+					<li><i class="fa fa-star" aria-hidden="true"></i> Revista científica e incentivo à pesquisa</li>
+					<li><i class="fa fa-star" aria-hidden="true"></i> Excelência no atendimento</li>
+				</ul>
 			</div>
-			<ul class="video-list col-md-6">
-				<li><i class="fa fa-star" aria-hidden="true"></i> Professores capacitados</li>
-				<li><i class="fa fa-star" aria-hidden="true"></i> Materiais atualizados</li>
-				<li><i class="fa fa-star" aria-hidden="true"></i> 8 anos em atividade</li>
-				<li><i class="fa fa-star" aria-hidden="true"></i> Revista científica e incentivo à pesquisa</li>
-				<li><i class="fa fa-star" aria-hidden="true"></i> Excelência no atendimento</li>
-			</ul>
+			
 		</div>
 	</div>
 	<div class="row noticias" id="noticias">
 		<h3><strong>Notícias</strong> e Informativos</h3>
-		<div class="col-md-8 noticias-lista">		
-			<div class="noticia col-md-12">
-				<div class="data"><span class="dia">07</span><span>ago</span><span>2017</span></div>
-				<p>
-					<strong>Atenção Alunos do curso de Civil/Processo!</strong>					
-					<span>Recado do Prof. Daniel Coinago</span>
-					<a href="">Leia mais...</a>
-				</p>
-			</div>
-			<div class="noticia col-md-12">
-				<div class="data"><span class="dia">07</span><span>ago</span><span>2017</span></div>
-				<p>
-					<strong>Atenção Alunos do curso de Civil/Processo!</strong>					
-					<span>Recado do Prof. Daniel Coinago</span>
-					<a href="">Leia mais...</a>
-				</p>				
-			</div>
+		<div class="col-md-8 noticias-lista">	
+			{% for new in news|slice(0, 2) %}
+				<div class="noticia col-md-12">
+					<div class="data">{{ new.dt_news|date("d/m/Y") }}</div>
+					<!-- <div class="data"><span class="dia">07</span><span>ago</span><span>2017</span></div> -->
+					<p>
+						<a href="news/{{new.id_news}}">
+						<strong>{{ new.title }}</strong>					
+						<span>{{ new.label }}</span>
+						Leia mais...</a>
+					</p>
+				</div>	
+			{% endfor %}	
+			
 			<div class="row">
-				<div class="col-md-6">
-					<div class="col-md-12 noticia">
-						<div class="data">07/08/2017</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				{% for new in news|slice(2, 4) %}
+					<div class="col-md-6">
+						<div class="col-md-12 noticia">
+							<div class="data">{{ new.dt_news|date("d/m/Y") }}</div>
+							<p><a href="news/{{new.id_news}}">{{ new.title }}</a></p>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-12 noticia">
-						<div class="data">07/08/2017</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-12 noticia">
-						<div class="data">07/08/2017</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="col-md-12 noticia">
-						<div class="data">07/08/2017</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-				</div>
+				{% endfor %}				
 			</div>
 			<a href="/noticias" class="seemore">Veja todas as notícias</a>
 		</div>
 		<div class="col-md-4 links">
-			<img src="/public/images/revistaprojuris.gif" alt="Revista Projuris">
+			<img src="http://www.projuriscursos.com.br/public/arquivos/imagens/banners/revista-intervencao-estado-e-sociedade308356.jpg" alt="Revista Intervenção, Estado e Sociedade">
 			<div id="face" class="right pad_top_10px">
-                <div class="fb-like-box" data-href="https://www.facebook.com/ProjurisEstudosJuridicos" data-width="380" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
+                <div class="fb-like-box" data-href="https://www.facebook.com/ProjurisEstudosJuridicos" data-width="440px" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
             </div>            
             <script>(function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
@@ -179,7 +155,7 @@
 			</a>
 		</div>		
 	</div>
-	<div class="row newsletters">
+	<!-- <div class="row newsletters">
 		<h3>Cadastre-se</h3>
 		<span>Receba informativos e novidades exclusivos</span>
 		<form action="" method="POST" class="form-inline" role="form">
@@ -194,5 +170,5 @@
 			</div>
 			<button type="submit" class="btn btn-primary">Cadastre-se</button>
 		</form>
-	</div>
+	</div> -->
 {% endblock %}

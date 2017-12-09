@@ -1,0 +1,16 @@
+<?php return array (
+  'plugins.generic.usageStats.settings.logging' => 'Opções de log de acessos',
+  'plugins.generic.usageStats.settings.createLogFiles' => 'Criar arquivos de log',
+  'plugins.generic.usageStats.settings.createLogFiles.description' => 'Ativar esta opção fará com que o plugin crie arquivos de log dentro da sua pasta de arquivos. Os arquivos devem ser usados para extração de dados estatísticos. Caso não deseje criar mais arquivos de log, deixe a opção desabilitada e use os arquivos de log do próprio servidor.',
+  'plugins.generic.usageStats.settings.logParseRegex' => 'Expressão regular de tratamento de arquivos de log',
+  'plugins.generic.usageStats.settings.logParseRegex.description' => 'A expressão regular padrão pode ser usada para tratar arquivos de log do apache em formato combinado, bem como os arquivos de log do plugin. Caso seus arquivos de log estejam em formato diferente, será necessário inserir uma regex capaz de tratá-los e recuperar os valores esperados. Veja UsageStatsLoader::_getDataFromLogEntry() para mais informações.',
+  'plugins.generic.usageStats.settings.saved' => 'Configurações do plugin de estatísticas de uso salvas com sucesso',
+  'plugins.generic.usageStats.openFileFailed' => 'O arquivo {$file} não pôde ser aberto e foi rejeitado.',
+  'plugins.generic.usageStats.invalidLogEntry' => 'A linha {$lineNumber} do arquivo {$file} não é uma entrada de log válida e o arquivo foi rejeitado.',
+  'plugins.generic.usageStats.displayName' => 'Estatísticas de uso',
+  'plugins.generic.usageStats.description' => 'Apresentar estatísticas de uso de objetos de dados. Pode usar arquivos de log de acesso para extrair estatísticas.',
+  'plugins.reports.usageStats.report.displayName' => 'Relatório de estatísticas de uso do OJS',
+  'plugins.reports.usageStats.report.description' => 'Relatório de estatísticas de uso padrão do OJS (pronto para COUNTER)',
+  'plugins.reports.usageStats.metricType' => 'OJS/COUNTER',
+  'plugins.reports.usageStats.metricType.full' => 'Estatísticas Open Journal Systems (pronto para COUNTER)',
+); ?>

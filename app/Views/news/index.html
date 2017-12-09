@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block content %}
+	<div class="row page-news">		
+		<div class="col-md-8">
+			<h1>
+				{{ news.title }}
+			</h1>
+			<div class="data">{{ news.dt_news|date("d/m/Y") }}</div>
+			{{ news.content | raw }}
+		</div>
+		
+	</div>
+{% endblock %}

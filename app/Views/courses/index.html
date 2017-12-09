@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block content %}
+	<div class="row page-course">
+		<div class="col-md-4 pull-right">
+			<div class="fixed">
+				<a href="{{ course.url_external ? course.url_external : course.url }}" target="{{ course.url_external ? '_blank' : '_self' }}">
+					<img src="/public/files/images/banners/{{course.banners}}" alt="{{ course.name }}" style="max-width: 100%">
+				</a>	
+				<p>{{ course.label }}</p>
+			</div>	
+		</div>
+		<div class="col-md-8">
+			<h1>
+				{{ course.name }}
+			</h1>
+			{{ course.content | raw }}
+		</div>
+		
+	</div>
+{% endblock %}

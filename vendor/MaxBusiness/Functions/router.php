@@ -106,6 +106,7 @@ class Router extends MainController
 			}
 			// Seta o Controller correto
 			$this->controller = $isFriendlyUrl[0]['table_name'];
+			$this->params = $isFriendlyUrl[0];
 			// redefine a classe
 			$class = APP_NAMESPACE.$this->folder."Controllers\\".ucfirst($this->controller)."Controller";
 		}
@@ -114,7 +115,7 @@ class Router extends MainController
 			// Define Action 
 			$this->action = 'show';
 			// Redefine parâmetros
-			$this->params 	= array_slice($url, 1); 
+			$this->params 	= !$this->params ? array_slice($url, 1) : $this->params; 
 		}
 		
 		// Instancia a classe controladora

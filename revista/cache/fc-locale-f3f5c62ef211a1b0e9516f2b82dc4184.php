@@ -1,0 +1,18 @@
+<?php return array (
+  'plugins.reports.timedView.displayName' => 'Relatórios temporais de acessos',
+  'plugins.reports.timedView.description' => 'Este plugin implementa um relatório no formato CSV para cada artigo, filtrado por um período de tempo definido pelo usuário.',
+  'plugins.reports.timedView.form.dateStartRequired' => 'A data de início é obrigatória.',
+  'plugins.reports.timedView.form.dateStartValid' => 'Escolha uma data de início válida.',
+  'plugins.reports.timedView.form.dateEndRequired' => 'A data de final é obrigatória.',
+  'plugins.reports.timedView.form.dateEndValid' => 'Escolha uma data final válida.',
+  'plugins.reports.timedView.form.generate' => 'Gerar relatório',
+  'plugins.reports.timedView.form.clearLogs' => 'Limpar logs',
+  'plugins.reports.timedView.form.clearLogs.description' => 'Escolha a data para remover registros dos logs. Quaisquer entradas de log realizadas antes da data escolhida serão excluídas. Note que isto afeta apenas o plugin de Relatórios temporais de acessos e não a contagem de acessos feitas em outros locais (no plugin de Acessos gerais, por exemplo).',
+  'plugins.reports.timedView.form.clearLogs.confirm' => 'Deseja realmente excluir estes registros? Este processo não pode ser anulado.',
+  'plugins.reports.timedView.report.articleId' => 'ID do artigo',
+  'plugins.reports.timedView.report.articleTitle' => 'Título',
+  'plugins.reports.timedView.report.datePublished' => 'Data de publicação',
+  'plugins.reports.timedView.report.abstractViews' => 'Acessos ao resumo',
+  'plugins.reports.timedView.report.galleyViews' => 'Acessos às composições finais',
+  'plugins.reports.timedView.form.useTimedViewRecords' => 'Marque para usar estatísticas retiradas pelo antigo plugin Visão Temporal. Caso deseje gerar um relatório de visão temporal com novos dados estatísticos, deixe esta opção desmarcada.',
+); ?>

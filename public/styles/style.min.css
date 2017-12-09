@@ -22,7 +22,10 @@ body{
 }
 
 .scroll .navbar{
-	background: rgba(0,0,0,0.7);
+	/*background: rgba(0,0,0,0.7);*/
+	background: #FFFFFF;
+	    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
 .scroll .navbar-brand img{
@@ -32,6 +35,23 @@ body{
 .scroll .nav.navbar-nav li {
     margin-top: 0px;
 }
+
+.scroll .nav.navbar-nav li a{
+	color: #000000;
+}
+
+.scroll .nav.navbar-nav li:hover{
+	border-bottom: 3px solid #F26A00;
+}
+.scroll .nav.navbar-nav li:hover a{
+	color: #FFFFFF;
+
+}
+
+.scroll .nav.navbar-nav li.dropdown a{
+	color: #FFFFFF;
+}
+
 .navbar-header h1,
 .navbar-brand{ 
 	padding: 0; 
@@ -100,6 +120,8 @@ body{
 	min-height: 110vh;
 	padding-top: 60vh;
 	text-align: center;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 .row.banners .label{	
 	display: block;
@@ -138,9 +160,15 @@ body{
 .row.cursos .cursos-box {
     background-color: #2b3e50;
     height: auto;
+
+    border: 1px solid #1c2833;
+
+}
+.cursos-box .col-md-4:hover {
+    background: #1c2833;
 }
 
-.row.cursos .cursos-box a{
+.row.cursos .cursos-box > div{
 	color: #ffffff;
 	text-align: center;	
 
@@ -149,14 +177,14 @@ body{
 	text-decoration: none;
 }
 
-.row.cursos .cursos-box a p{
+.row.cursos .cursos-box > div  p{
 	padding: 30px 10px;
 	font-size: 14px;
 	height: 300px;
 	text-align: center;
 }
 
-.row.cursos .cursos-box a span{	
+.row.cursos .cursos-box > div a.btn-primary{	
 	text-transform: uppercase;
     display: block;
     width: 50%;
@@ -169,7 +197,7 @@ body{
     padding: 0;
    
 }
-.row.cursos .cursos-box a span:hover{
+.row.cursos .cursos-box >div a:hover{
  	border-bottom: none;
     border-top: 3px solid #ffffff;
 }
@@ -234,6 +262,7 @@ h3 strong{
 	background-color: #2b3e50;
 	text-align: center;
 	padding-bottom: 10px;
+	 border: 1px solid #1c2833;
 }
 
 .row.noticias .links img{
@@ -250,7 +279,7 @@ h3 strong{
 }
 
 .noticia p {
-    padding: 10px 50px 10px 70px;
+    padding: 10px 50px 10px 100px;
     font-size: 18px;
     color: #333333;
 }
@@ -267,6 +296,11 @@ h3 strong{
 .noticia p a {
     display: block;
     float: right;
+    color: #333333;
+}
+
+.noticia p a:hover {
+    text-decoration: none;
 }
 
 .noticias .seemore{
@@ -364,18 +398,40 @@ h3 strong{
 footer {
 	background-color: #2b3e50;
 	margin-top: 30px;
-	padding: 20px;
+	padding: 50px;
 	color: #FFFFFF;
+	border: 1px solid #1c2833;
+}
+footer ul{
+	list-style: none;
+	padding: 0;
+}
+footer span{
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
 }
 footer a{
 	color: #CCCCCC;
 	
 }
 
+
+
 footer a:hover{
 	color: #F26A00;
 	text-decoration: none;
 
+}
+.f-selos img {
+    max-width: 120px;
+    float: left;
+}
+
+.credit{
+	background: #1c2833;
+	color: #fff;
+	text-align: right;
 }
 
 @keyframes arrow-down {
@@ -383,4 +439,22 @@ footer a:hover{
     50% {margin-top: 5px;}
     90% {margin-top: 10px;}
     100% {margin-top: 0;}
+}
+
+.page-course,
+.page-news{
+	margin-top: 150px;
+	min-height: 80vh;
+}
+
+
+.page-course .pull-right .fixed{
+	position: fixed;
+	background: #EDEDED;
+    padding: 20px;
+    border: 1px solid #CCC;
+}
+
+.page-course .pull-right .fixed a img{
+	margin-bottom: : 20px;
 }

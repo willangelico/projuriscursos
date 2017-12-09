@@ -1,0 +1,17 @@
+<?php return array (
+  'plugins.generic.customBlockManager.displayName' => 'Administração de blocos personalizados',
+  'plugin.generic.customBlockManager.introduction' => 'Esta ferramenta permite incluir ou excluir plugins de bloco personalizados. Após incluir blocos, edite seus conteúdos na página <a href="{$systemPluginsUrl}">Plugins do sistema</a> (na seção Plugins de bloco).  Para incluir seu plugin no local desejado nas barras laterais disponíveis, acesse <a href="{$setupStep56}">Passo 5.6</a>',
+  'plugins.generic.customBlockManager.settings' => 'Configurações',
+  'plugins.generic.customBlockManager.blockName' => 'Nome do bloco',
+  'plugins.generic.customBlockManager.action' => 'Ação',
+  'plugins.generic.customBlockManager.delete' => 'Excluir',
+  'plugins.generic.customBlockManager.addBlock' => 'Incluir bloco',
+  'plugins.generic.customBlock.content' => 'Conteúdo',
+  'plugins.generic.customBlock.saved' => 'O conteúdo do bloco foi salvo com sucesso.',
+  'plugins.generic.customBlock.nameSuffix' => '(Plugin de bloco personalizado)',
+  'plugins.generic.customBlock.description' => 'Bloco produzido pelo usuário.',
+  'plugins.generic.customBlock.editContent' => 'Editar o conteúdo da barra lateral',
+  'plugins.generic.customBlock.contentRequired' => 'Algum conteúdo é obrigatório. Caso deseje excluir este bloco, acesse o plugin Administração de blocos personalizados ou desabilitando o bloco no Passo 5.6 de configuração da revista.',
+  'plugins.generic.customBlock.edit' => 'Editar',
+  'plugins.generic.customBlockManager.description' => 'Este plugin permite administrar os blocos personalizados das barras laterais. Você pode editar os blocos nas configurações de cada plugin que você criar aqui.',
+); ?>
