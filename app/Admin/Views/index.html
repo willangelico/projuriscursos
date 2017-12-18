@@ -10,6 +10,7 @@
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 		<link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 		<link rel="stylesheet" href="/public/styles/admin.min.css" />
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -35,8 +36,10 @@
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
- 		<!-- <script src="Hello World"></script> -->
+		<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+		<script type="text/javascript" src="/public/plugins/dropzone/dropzone.js"></script>
+		
  		<script type="text/javascript">
  			$('.change-status').on('click', function(event){
  				event.preventDefault();
@@ -63,6 +66,82 @@
 			    
  				
  			});
+ 			$(document).ready(function() {
+ 				$('input[name="date"]').daterangepicker(
+            { 
+              singleDatePicker: true ,
+              
+             startDate: moment(),
+              locale: {
+              	format: 'DD/MM/YYYY',
+                  applyLabel: 'Aplicar',
+                  cancelLabel: 'Cancelar',
+                  fromLabel: 'De',
+                  toLabel: 'Até',
+                  customRangeLabel: 'Personalizado',
+                  daysOfWeek: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex','Sab'],
+                  monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                  firstDay: 1
+              }
+            });          
+          $('input[name="daterange"]').daterangepicker(
+          {
+              
+              startDate: moment(),
+              endDate: moment().add(1, 'month'),
+              ranges: {
+                 'Hoje': [moment(), moment()],
+                 'Amanhã': [moment().add(1, 'days'), moment().add(1, 'days')],
+                 'Próximos 7 Dias': [moment(), moment().add(6, 'days')],
+                 'Próximos 30 Dias': [moment(), moment().add(29, 'days')],
+                 'Este Mês': [moment().startOf('month'), moment().endOf('month')],
+                 'Próximo Mês': [moment().add(1, 'month').startOf('month'), moment().add(1, 'month').endOf('month')]
+              },
+              separator: ' até ',
+              locale: {
+              	format: 'DD/MM/YYYY',
+                  applyLabel: 'Aplicar',
+                  cancelLabel: 'Cancelar',
+                  fromLabel: 'De',
+                  toLabel: 'Até',
+                  customRangeLabel: 'Personalizado',
+                  daysOfWeek: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex','Sab'],
+                  monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                  firstDay: 1
+              }
+
+          });
+
+			Dropzone.options.dropzoneevent = {
+			  url: "upload",
+			  paramName: "file", // The name that will be used to transfer the file
+			  maxFilesize: 2, // MB
+			  accept: function(file, done) {
+			    if (file.name == "justinbieber.jpg") {
+			      done("Naha, you don't.");
+			    }
+			    else { done(); }
+			  },
+			  init: function() {
+			    this.on("addedfile", function(file) { 
+			    	console.log(file);
+			    });
+			     this.on("success", function(file, serverFileName) {
+                        //fileList[i] = {"serverFileName" : serverFileName, "fileName" : file.name,"fileId" : i };
+                        console.log(serverFileName);
+                        //i++;
+
+                    });
+			  },
+
+			};
+
+      });
+
+
+
+ 
+ 			
  		</script>
 	</body>
 </html>

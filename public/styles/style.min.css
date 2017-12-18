@@ -129,6 +129,7 @@ body{
 	text-transform: uppercase;
 	font-weight: normal;
 }
+
 .row.banners span{
 	font-size: 14px;
 	color: #EDEDED;
@@ -335,7 +336,7 @@ h3 strong{
 .row.depoimentos{
 	background-color: #333333;
 	color: #ffffff;
-	height: 70vh; 
+	min-height: 70vh; 
 	margin-top: 30px;
 	text-align: center;
 }
@@ -347,7 +348,12 @@ h3 strong{
 	margin: 10px;
 }
 .row.depoimentos .carousel{
-	height: 60vh;
+	min-height: 60vh;
+}
+
+.row.depoimentos .carousel-inner {
+    display: block;
+    margin-bottom: 40px;
 }
 
 .row.depoimentos .item .depoimento-nome{
@@ -356,7 +362,8 @@ h3 strong{
 
 .row.depoimentos .item p {
 	padding: 40px 0px;
-	font-size: 20px;
+	font-size: 16px;
+	height: 140px;
    
 }
 
@@ -374,7 +381,7 @@ h3 strong{
 
 
 .row.depoimentos ol.carousel-indicators {
-    bottom: 10%;
+    bottom: 0;
 }
 
 
@@ -457,4 +464,150 @@ footer a:hover{
 
 .page-course .pull-right .fixed a img{
 	margin-bottom: : 20px;
+}
+
+
+@media ( max-width: 1200px ) {
+	.row.banners .label {
+
+	    font-size: 38px;
+	    
+	}
+}
+
+@media ( max-width: 992px ) {
+	.row.cursos .cursos-box > div p{
+		font-size: 12px;
+	}
+	.noticia .data {
+	    float: none !important;
+	}
+
+	.noticia p {
+	    padding: 10px;
+	    font-size: 14px;
+	}
+	.noticia p a {
+	    float: none;
+	}
+}
+
+@media ( max-width: 768px ) {
+	.row.banners .label {
+
+	    font-size: 28px;
+	    
+	}
+	.row.cursos .cursos-box > div p {
+	    height: 200px;
+	}
+
+	.cursos-box .col-md-4 {
+	    padding: 30px 0px 50px;
+	    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	}
+
+	.video-embed {
+	    padding-top: 100px;
+	}
+
+
+	.video-content .row:after {
+	    clear: both;
+	}
+
+	.row.video.parallax {
+	    height: auto;
+	}
+
+	.navbar-default .navbar-toggle {
+	    background-color: #2b3e50;
+	    border-color: #2b3e50;
+	    border: 1px solid rgba(0,0,0,.15);
+	    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	    padding: 20px;
+	}
+
+
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus
+	{
+		background-color: #F26A00;
+		border-color: #F26A00;
+	}
+
+	.navbar-default .navbar-toggle:hover .icon-bar,
+	.navbar-default .navbar-toggle:focus .icon-bar{
+		background-color: white;
+	}
+
+	.navbar-collapse.navbar-ex1-collapse.collapse.in {
+	       background-color: white;
+	    border-color: #2b3e50;
+	    color: black;
+	}
+	.nav.navbar-nav li {
+	    margin-top: 10px; 
+	}
+
+	.nav.navbar-nav li a {
+	    color: black;
+	}
+	.navbar-brand>img {
+	    max-height: 70px;
+	}
+}
+@media ( max-width: 320px ) {
+	h1 img {
+	    max-width: 100%;
+	}
+
+	.row.institucional h2 {
+	    margin: 0;
+	    font-size: 30px;
+	}
+
+	.row.institucional {
+	    padding: 10px 0;
+	}
+
+	.row.banners .label {
+	    font-size: 20px;
+	    white-space: initial;
+	}
+
+	.video-embed iframe {
+	    max-width: 100%;
+	}
+
+	h3 strong {
+	    font-size: 40px;
+	}
+
+	h3 {
+	    font-size: 24px;
+	}
+
+	.row.video .video-content ul.video-list li {
+	    font-size: 18px;
+	}
+
+	.row.banners .banner-full-1 {
+	    padding-top: 50vh;
+	}
+
+	.row.cursos .cursos-box > div p {
+	    height: 250px;
+	}
+
+	.row.depoimentos .item p {
+	    font-size: 12px;
+	    padding: 20px 0px;
+	    height: 280px;
+	}
+
+	.row.depoimentos .carousel-inner {
+	}
 }

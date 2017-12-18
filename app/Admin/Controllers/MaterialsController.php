@@ -16,12 +16,13 @@ class MaterialsController extends loginController
 		parent::auth(TRUE);
 		$this->main = $main;
 		$this->model = $this->main->loadModel('Materials');
+		
 	}
 
 	public function index()
 	{
-		$this->content['list'] = $this->model->getAll();
-		echo $this->main->twig->render('\\materials\\index.html', $this->content);
+		$this->content['classes'] = $this->model->getAllClassWithCourses();
+		echo $this->main->twig->render('\\materials\\filterClasses.html', $this->content);
 	}
 
 	public function add()
@@ -37,6 +38,14 @@ class MaterialsController extends loginController
 	public function delete()
 	{
 		echo $this->main->twig->render('\\materials\\delete.html', $this->content);
+	}
+
+	public function turma()
+	{
+		$idClass = $this->main->getParams()[0];
+		$this->content['materials'] = $this->model->getAllByClass($idClass);
+		echo $this->main->twig->render('\\materials\listByClass.html', $this->content);
+		
 	}
 
 }

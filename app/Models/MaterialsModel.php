@@ -70,4 +70,57 @@ class MaterialsModel
         }
         return $materials;        
     }
+
+    public function getAllClassWithCourses()
+    {
+        $queryCourses = $this->db->query(
+            "SELECT * FROM courses 
+            ORDER BY ordenation ASC, name ASC"
+        );
+        $courses = $queryCourses->fetchAll();
+        foreach ($courses as $key => $course) {
+            $queryClass = $this->db->query(
+                "SELECT * FROM class
+                WHERE id_course = {$course['id_course']} 
+                ORDER BY name ASC"
+            );
+            $classes = $queryClass->fetchAll();
+            $courses[$key]['classes'] = $classes;
+        }
+        return $courses;
+    }
+
+    public function getAllByClass($idClass)
+    {
+        $queryCourse = $this->db->query(
+            "SELECT courses.name as course_name, class.name as class_name, class.id_class as id_class 
+            FROM courses, class
+            WHERE class.id_class = {$idClass}
+            AND class.id_course = courses.id_course"
+        );
+        $materials = $queryCourse->fetch();
+        $queryMaterials = $this->db->query(
+            "SELECT DISTINCT dt_material as material_data
+            FROM {$this->table}
+            WHERE id_class = {$idClass}
+            ORDER BY dt_material DESC, ordenation"
+        );
+        $datam = $queryMaterials->fetchAll();
+        foreach($datam as $key => $mat){                  
+            $query = $this->db->query(
+                "SELECT materials.id_material as id_material, materials.label as material_name, materials.file as material_file, materials.status as status
+                FROM {$this->table} 
+                WHERE id_class = {$idClass}
+                and dt_material = '{$mat['material_data']}'
+                ORDER BY dt_material DESC, ordenation"
+            );    
+            $matsByDate = $query->fetchAll();      
+            if( $matsByDate){
+                $materials['data'][$key] = $mat;
+                
+                $materials['data'][$key]['material'] = $matsByDate;
+            }
+        }
+        return $materials;
+    }
 }

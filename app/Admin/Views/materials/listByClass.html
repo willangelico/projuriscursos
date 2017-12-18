@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <h1>Materiais <small>Lista de Materiais</small></h1>
+  <ol class="breadcrumb">   
+    <li><a href="/admin"><i class="fa fa-tachometer"></i>Home</a></li>
+    <li><a href="/admin/materials"><i class="fa fa-picture-o"></i>Materiais</a></li>
+    <li class="active">Lista de Materiais</li>
+  </ol>
+  <div class="content-box">
+    <h2>{{  materials.course_name }} 
+        <small>{{ materials.class_name }}</small></h2>
+    <div class="group-actions">
+      <a class="btn btn-primary" href="/admin/materials/add/{{ materials.id_class }}">Enviar Materiais</a>
+    </div>    
+    <div class="content-form"> 
+      {% for dates in materials.data %}
+        <div class="col-md-6">
+          <h4>{{ dates.material_data == '0000-00-00' ? 'Anteriores' : dates.material_data|date("d/m/Y") }}</h4>
+          <table class="table table-striped table-hover ">
+            <thead>
+              <tr>
+                <th class="col-sm-1"></th>                  
+                <th>Arquivo</th>
+                <th class="col-sm-3">Opções</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for material in dates.material %}
+                <tr>    
+                  <td><i class="fa fa-toggle-{{ material.status ? 'on' : 'off' }}" aria-hidden="true"></i></td>
+                  <td><strong>{{ material.material_name }}</strong><br /><small>{{ material.material_file }}</small></td>
+                  <td>
+                    <div class="list-actions">
+                      <a class="btn btn-xs btn-primary" href="http://www.projuriscursos.com.br/public/arquivos/arquivos/intra_materiais/{{ material.material_file}}" target="_blank">
+                        <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                      <a class="btn btn-xs btn-danger" href="/admin/materials/delete/{{ material.id_material }}">Excluir</a>
+                    </div>
+                  </td>
+                </tr>
+              {% endfor %}  
+            </tbody>
+          </table>
+        </div>        
+      {% endfor %}
+      <br clear="all">
+    </div>
+  </div> 
+{% endblock %}

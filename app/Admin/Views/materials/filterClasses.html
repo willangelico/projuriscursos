@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+  <h1>Materiais <small>Selecione a Turma</small></h1>
+  <ol class="breadcrumb">   
+    <li><a href="/admin"><i class="fa fa-tachometer"></i>Home</a></li>
+    <li class="active"><i class="fa fa-picture-o"></i>Materiais</li>    
+  </ol>
+  <div class="content-box">
+    <div class="row">
+    {% for course in classes %}
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              {{  course.name }}             
+            </h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              {% for class in course.classes %}
+               <a href="materials/turma/{{ class.id_class }}" class="btn btn-primary btn-lg btn-block">{{ class.name}}</a>
+              {% endfor %}              
+            </ul>            
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
